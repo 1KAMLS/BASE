@@ -98,7 +98,8 @@ public class Tests
     }
 
     @AfterEach
-    private void afterEach() {
-        WebDriverManager.killCurrentDriver();
+    private void afterEach()
+    {
+        WebDriverManager.killCurrentDriver();//отключение браузера
     }
 }

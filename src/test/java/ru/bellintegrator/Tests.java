@@ -36,12 +36,6 @@ public class Tests
         stepsTask4=new StepsTask4(driver);
     }
 
-    @Feature("Пустой тест")
-    @Test
-    @DisplayName("Пустой тест")
-    public void firstUITest(){
-    }
-
     @Feature("Проверка тайтла")
     @Test
     @DisplayName("Проверка тайтла напрямую")
@@ -102,9 +96,10 @@ public class Tests
         stepsTask4.executeFind2(nameCard2, task4);
         stepsTask4.executeFind3(task4);
     }
-//
-//    @AfterEach
-//    private void afterEach() {
-//        WebDriverManager.killCurrentDriver();
-//    }
+
+    @AfterEach
+    private void afterEach()
+    {
+        WebDriverManager.killCurrentDriver();//отключение браузера
+    }
 }

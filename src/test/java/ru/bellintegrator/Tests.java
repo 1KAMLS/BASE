@@ -86,7 +86,7 @@ public class Tests
     @DisplayName("Проверка результатов поиска c помощью PF")
     @ParameterizedTest
     @CsvSource({"GTX 1050 ti,RTX 3070,https://market.yandex.ru/"})
-    public void testCard(String nameCard1,String nameCard2, String url)
+    public void testCard(String nameCard1,String nameCard2, String url)//Домашнее задание №3
     {
         stepsTask4.goToURL(url);//браузер получает адрес страницы
         TaskPageFactory4 task4=PageFactory.initElements(driver, TaskPageFactory4.class);//создание объекта с передачей туда браузера

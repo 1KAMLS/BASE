@@ -95,7 +95,7 @@ public class Tests
         stepsTask4.executeFind3(task4);
         stepsTask4.executeFind2(nameCard2, task4);
         stepsTask4.executeFind3(task4);
-    }
+    }//коммент для удаления запушенного коммита
 
     @AfterEach
     private void afterEach()

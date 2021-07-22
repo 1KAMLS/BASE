@@ -97,6 +97,21 @@ public class Tests
         stepsTask4.executeFind3(task4);
     }
 
+    @Feature("Сравнение видеокарт")
+    @DisplayName("Проверка результатов поиска c помощью PF")
+    @ParameterizedTest
+    @CsvSource({"GTX 1050 ti,RTX 3070,https://market.yandex.ru/"})
+    public void testCard2(String nameCard1,String nameCard2, String url)
+    {
+        stepsTask4.goToURL(url);//браузер получает адрес страницы
+        TaskPageFactory4 task4=PageFactory.initElements(driver, TaskPageFactory4.class);//создание объекта с передачей туда браузера
+        stepsTask4.executeFind1(task4);//клик по каталогу
+        stepsTask4.executeFind2(nameCard1, task4);
+        stepsTask4.executeFind3(task4);
+        stepsTask4.executeFind2(nameCard2, task4);
+        stepsTask4.executeFind3(task4);
+    }
+
     @AfterEach
     private void afterEach()
     {
